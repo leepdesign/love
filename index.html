@@ -7,39 +7,48 @@
     <title>计时器</title>
     <style>
         #timer {
-            font-size: 24px;
+            font-size: 36px;
+            /* 设置字体大小 */
             text-align: center;
             margin-top: 50px;
+            color: #296A56;
+            /* 设置字体颜色 */
+            font-family: Arial, sans-serif;
+            /* 设置字体 */
+            margin-bottom: 20px;
+            /* 设置下边距 */
         }
         /* 定义按钮样式 */
         
-        button {
-            background-color: #4CAF50;
+        .button {
+            background-color: #296A56;
             /* 设置背景颜色 */
             border: none;
             /* 移除边框 */
             color: white;
             /* 设置文本颜色 */
-            padding: 15px 32px;
+            padding: 8px 16px;
             /* 设置内边距 */
             text-align: center;
             /* 设置文本居中 */
             text-decoration: none;
             /* 移除文本装饰 */
-            display: inline-block;
-            /* 将按钮显示为块级元素 */
+            display: block;
+            /* 将按钮显示为块级元素，让按钮从上至下排列 */
             font-size: 16px;
             /* 设置字体大小 */
-            margin: 4px 2px;
-            /* 设置外边距 */
+            margin: 10px auto;
+            /* 设置外边距，让按钮居中并添加上下边距 */
             cursor: pointer;
             /* 设置鼠标指针为手型 */
-            border-radius: 10px;
+            border-radius: 4px;
             /* 设置圆角 */
+            width: 160px;
+            /* 设置按钮宽度 */
         }
         /* 定义按钮悬停时的样式 */
         
-        button:hover {
+        .button:hover {
             background-color: #45a049;
             /* 设置悬停时的背景颜色 */
         }
@@ -48,11 +57,11 @@
 
 <body>
     <div id="timer">00:00:00</div>
-    <div id="buttons" style="text-align: center; margin-top: 20px;">
+    <div id="buttons" style="text-align: center;">
         <!-- 为按钮添加样式 -->
-        <button onclick="startTimer()">开始</button>
-        <button onclick="stopTimer()">停止</button>
-        <button onclick="resetTimer()">重置</button>
+        <button class="button" onclick="startTimer()">开始</button>
+        <button class="button" onclick="stopTimer()">停止</button>
+        <button class="button" onclick="resetTimer()">重置</button>
     </div>
 
     <script>
